@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: fsrp-discord-bot
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TOKEN
+        sync: false
+      - key: UPTIMEROBOT_KEY
+        sync: false
+      - key: UPTIMEROBOT_MONITOR_ID
+        sync: false
+
